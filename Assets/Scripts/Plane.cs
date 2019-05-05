@@ -14,6 +14,7 @@ public class Plane
     {
         A = _A;
         B = _B;
+        C = _C;
         v = B - A;
         u = C - A;
     }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//hiiiiiiiiiiiiiiii
+
 public class Coords {
 
     public float x;
@@ -49,6 +49,11 @@ public class Coords {
     {
         Coords c = new Coords(a.x - b.x, a.y - b.y, a.z - b.z);
         return c;
+    }
+
+    static public Coords Perp(Coords v)
+    {
+        return new Coords(-v.y, v.x);
     }
 
     static public void DrawLine(Coords startPoint, Coords endPoint, float width, Color colour)

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HolisticMath
 {
+    //each component of the vector divided by the length, results in a vector of length one in the same dirction
     static public Coords GetNormal(Coords vector)
     {
         float length = Distance(new Coords(0, 0, 0), vector);
@@ -13,7 +14,7 @@ public class HolisticMath
 
         return vector;
     }
-
+    // returns the length of a vector
     static public float Distance(Coords point1, Coords point2)
     {
         float diffSquared = Square(point1.x - point2.x) + 
@@ -23,7 +24,7 @@ public class HolisticMath
         return squareRoot;
 
     }
-
+    //linear interpolation mapping of any point on a line
     static public Coords Lerp(Coords A, Coords B, float t)
     {
         t = Mathf.Clamp(t, 0, 1);
